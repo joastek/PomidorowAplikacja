@@ -1,0 +1,17 @@
+.icon {
+  height: 5rem;
+  width: 5rem;
+  padding: 3rem;
+}
+.icon:hover,
+.icon:active {
+  animation-name: iconScale;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes iconScale {
+  80% {
+    transform: scale(1.2);
+  }
+}

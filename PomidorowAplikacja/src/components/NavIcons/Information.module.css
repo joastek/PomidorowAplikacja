@@ -1,0 +1,10 @@
+.icon {
+  height: 5rem;
+  width: 5rem;
+  padding: 3rem;
+}
+
+.icon:hover,
+.icon:active {
+  background-color: #ebc002;
+}

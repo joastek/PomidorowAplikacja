@@ -1,0 +1,11 @@
+nav {
+  position: absolute;
+  top: 0rem;
+  right: 3rem;
+  padding: 2rem;
+}
+.box {
+  background-color: red;
+  width: 2rem;
+  height: 2rem;
+}
