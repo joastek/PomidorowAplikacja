@@ -3,7 +3,7 @@
   width: 5rem;
   padding: 3rem;
 }
-.icon:hover,
+/* .icon:hover,
 .icon:active {
   animation-name: iconScale;
   animation-duration: 0.7s;
@@ -14,4 +14,4 @@
   80% {
     transform: scale(1.2);
   }
-}
+} */
