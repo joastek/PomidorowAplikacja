@@ -1,5 +1,5 @@
-import Settings from "./NavIcons/Settings";
-import Information from "./NavIcons/Information";
+import Settings from "./Settings";
+import Information from "./Information";
 import classes from "./NavigationBar.module.css";
 import Logo from "./Logo";
 const NavigationBar = () => {
