@@ -1,13 +1,17 @@
 import Settings from "./NavIcons/Settings";
 import Information from "./NavIcons/Information";
 import classes from "./NavigationBar.module.css";
+import Logo from "./Logo";
 const NavigationBar = () => {
   return (
-    <nav className={classes.nav}>
-      <Settings />
+    <>
+      <Logo />
+      <nav className={classes.nav}>
+        <Settings />
 
-      <Information />
-    </nav>
+        <Information />
+      </nav>
+    </>
   );
 };
 
