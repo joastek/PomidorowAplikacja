@@ -1,14 +1,10 @@
 .box_1 {
   width: 47rem;
   height: 26rem;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+
   border: 5px solid #000000;
   background: #ef6348;
-  z-index: 2;
+  z-index: 3;
   position: absolute;
 }
 .box_2 {
@@ -16,27 +12,18 @@
   height: 26rem;
   border: 5px solid #000000;
   background: #2669b8;
-  z-index: 1;
+  z-index: 2;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+
   transform: matrix(0.99, -0.17, 0.16, 0.99, 0, 0);
 }
 .box_3 {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  z-index: 1;
   width: 47rem;
   height: 26rem;
   background: #f5bb12;
   border: 5px solid #000000;
   transform: matrix(1, -0.07, 0.07, 1, 0, 0);
-  position: absolute;
 }
 
 .text {
@@ -48,4 +35,11 @@
   align-items: center;
   line-height: 2rem;
   font-family: "Rowdies", cursive;
+}
+.container {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
 }

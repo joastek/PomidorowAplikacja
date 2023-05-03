@@ -1,0 +1,24 @@
+.container {
+  width: 40rem;
+  height: 9rem;
+  background: #f5bb12;
+  border: 5px solid #000000;
+  margin-left: 5rem;
+}
+
+p {
+  font-family: "Rowdies";
+
+  font-weight: 700;
+  font-size: 6.4rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.box {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35rem;
+}
