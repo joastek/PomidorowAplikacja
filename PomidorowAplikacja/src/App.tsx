@@ -1,14 +1,14 @@
 import "./App.css";
 import NavigationBar from "./components/NavIcons/Navigationbar";
 import CountDownBox from "./components/timer/CountdownBox";
-import classes from "./App.css";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
     <>
       <NavigationBar />
-
       <CountDownBox />
+      <Footer />
     </>
   );
 }
