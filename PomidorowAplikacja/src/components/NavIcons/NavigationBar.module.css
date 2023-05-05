@@ -5,3 +5,7 @@ nav {
   padding: 2rem;
   display: flex;
 }
+.active {
+  background-color: #ef6348;
+  border-radius: 40%;
+}
