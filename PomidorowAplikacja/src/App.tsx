@@ -1,14 +1,24 @@
 import "./App.css";
-import NavigationBar from "./components/NavIcons/Navigationbar";
-import CountDownBox from "./components/timer/CountdownBox";
-import Footer from "./components/footer/Footer";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import MainPage from "./components/pages/MainPage";
+import About from "./components/pages/About";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <>
+        <MainPage />
+      </>
+    ),
+  },
+  { path: "/about", element: <About /> },
+]);
 
 function App() {
   return (
     <>
-      <NavigationBar />
-      <CountDownBox />
-      <Footer />
+      <RouterProvider router={router} />
     </>
   );
 }

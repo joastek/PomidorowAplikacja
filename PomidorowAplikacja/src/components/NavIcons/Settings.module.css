@@ -2,6 +2,7 @@
   height: 5rem;
   width: 5rem;
   padding: 3rem;
+  cursor: pointer;
 }
 /* .icon:hover,
 .icon:active {

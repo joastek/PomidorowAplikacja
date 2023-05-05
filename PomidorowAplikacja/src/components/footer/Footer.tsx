@@ -3,21 +3,33 @@ import classes from "./Footer.module.css";
 const Footer = () => {
   return (
     <div className={classes.container}>
-      <a href="https://www.facebook.com/jan.czyszczon.31">
-        <i className="fa-brands fa-facebook"></i>
-      </a>
-      <a href="https://chat.openai.com/">
-        <i className="fa-solid fa-envelope"></i>
-      </a>
-
-      <a href="https://chat.openai.com/">
+      {/* <li>
         {" "}
-        <i className="fa-brands fa-github"></i>
-      </a>
-      <a href="https://chat.openai.com/">
+        <a
+          className={classes.icon}
+          href="https://www.facebook.com/jan.czyszczon.31"
+        >
+          <i className="fa-brands fa-facebook"></i>
+        </a>
+      </li>
+      <li>
         {" "}
-        <i className="fa-brands fa-linkedin"></i>
-      </a>
+        <a className={classes.icon} href="https://chat.openai.com/">
+          <i className="fa-solid fa-envelope"></i>
+        </a>
+      </li>
+      <li>
+        {" "}
+        <a className={classes.icon} href="https://chat.openai.com/">
+          <i className="fa-brands fa-github"></i>
+        </a>
+      </li>
+      <li>
+        {" "}
+        <a className={classes.icon} href="https://chat.openai.com/">
+          <i className="fa-brands fa-linkedin"></i>
+        </a>
+      </li> */}
     </div>
   );
 };

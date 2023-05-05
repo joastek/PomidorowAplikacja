@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
+
 import classes from "./Information.module.css";
-function Information() {
+
+const Information = () => {
   return (
     <>
+      {" "}
       <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
         <svg
           className={classes.icon}
@@ -22,6 +25,6 @@ function Information() {
       </motion.div>
     </>
   );
-}
+};
 
 export default Information;
