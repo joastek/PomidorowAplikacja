@@ -5,7 +5,6 @@ import Footer from "../footer/Footer";
 const MainPage = () => {
   return (
     <>
-      <NavigationBar />
       <CountDownBox />
 
       <Footer />
