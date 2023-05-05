@@ -3,19 +3,17 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainPage from "./components/pages/MainPage";
 import About from "./components/pages/About";
 import NavigationBar from "./components/NavIcons/Navigationbar";
+import ErrorPage from "./components/pages/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <NavigationBar></NavigationBar>,
+    element: <NavigationBar />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
-        element: (
-          <>
-            <MainPage />
-          </>
-        ),
+        element: <MainPage />,
       },
       { path: "/about", element: <About /> },
     ],

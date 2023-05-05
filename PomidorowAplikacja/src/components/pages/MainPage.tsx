@@ -1,4 +1,3 @@
-import NavigationBar from "../NavIcons/Navigationbar";
 import CountDownBox from "../timer/CountdownBox";
 import Footer from "../footer/Footer";
 
