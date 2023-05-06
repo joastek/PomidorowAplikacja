@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Outlet } from "react-router-dom";
+
 import Settings from "./Settings";
 import Information from "./Information";
 import classes from "./NavigationBar.module.css";
@@ -14,13 +15,17 @@ const NavigationBar = () => {
       <nav className={classes.nav}>
         <NavLink
           to="/"
-          className={({ isActive }) => (isActive ? classes.active : undefined)}
+          className={({ isActive }: any) =>
+            isActive ? classes.active : undefined
+          }
         >
           <Home />
         </NavLink>
         <NavLink
           to="/about"
-          className={({ isActive }) => (isActive ? classes.active : undefined)}
+          className={({ isActive }: any) =>
+            isActive ? classes.active : undefined
+          }
         >
           <Information />
         </NavLink>
