@@ -1,11 +1,9 @@
-import CountDownBox from "../timer/CountdownBox";
 import Footer from "../footer/Footer";
-
+import ActionButtons from "../timer/ActionButtons";
 const MainPage = () => {
   return (
     <>
-      <CountDownBox />
-
+      <ActionButtons />
       <Footer />
     </>
   );
