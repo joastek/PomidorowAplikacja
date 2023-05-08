@@ -1,6 +1,6 @@
 import classes from "./CountdownBox.module.css";
 
-const CountDownBox = ({ time }: any) => {
+const CountDownBox = (time: number) => {
   const formatTime = (seconds: number): string => {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = seconds % 60;
