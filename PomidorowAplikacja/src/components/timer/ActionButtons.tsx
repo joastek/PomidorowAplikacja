@@ -1,64 +1,76 @@
-import { useState, useRef } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import classes from "./ActionButtons.module.css";
 import CountDownBox from "./CountdownBox";
+import Settings from "../NavIcons/Settings";
 import Modal from "../pages/Modal";
 
 const ActionButtons: React.FC = () => {
-  // const [timer, setTimer] = useState(0);
-  const [time, setTime] = useState(25);
+  const [workTime, setWorkTime] = useState(25);
+  const [breakTime, setBreakTime] = useState(5);
   const [isRunning, setIsRunning] = useState(false);
-  const intervalRef = useRef<number | null>(null);
+  const [isWorking, setIsWorking] = useState(true);
+  const [timeLeft, setTimeLeft] = useState(workTime * 60);
 
-  const startTimer = () => {
+  useEffect(() => {
+    let intervalId: any = null;
+
+    if (isRunning && timeLeft > 0) {
+      intervalId = setInterval(() => {
+        setTimeLeft(timeLeft - 1);
+      }, 1000);
+    } else if (timeLeft === 0) {
+      setIsWorking(!isWorking);
+      setTimeLeft(isWorking ? breakTime * 60 : workTime * 60);
+    }
+
+    return () => clearInterval(intervalId);
+  }, [isRunning, timeLeft, isWorking, breakTime, workTime]);
+
+  const handleStart = () => {
     setIsRunning(true);
-    intervalRef.current = window.setInterval(() => {
-      setTime(time);
-    }, 1000);
   };
 
-  const stopTimer = () => {
+  const handlePause = () => {
     setIsRunning(false);
-    window.clearInterval(intervalRef.current!);
   };
 
-  const resetTimer = () => {
-    setTime(time);
+  const handleReset = () => {
     setIsRunning(false);
-    window.clearInterval(intervalRef.current!);
+    setIsWorking(true);
+    setTimeLeft(workTime * 60);
   };
 
-  const handleStartStopClick = () => {
-    if (isRunning) {
-      stopTimer();
-    } else {
-      startTimer();
+  const handleWorkTimeChange = (event: any) => {
+    setWorkTime(Number(event.target.value));
+    if (isWorking) {
+      setTimeLeft(Number(event.target.value) * 60);
     }
   };
 
-  const handleResetClick = () => {
-    resetTimer();
+  const handleBreakTimeChange = (event: any) => {
+    setBreakTime(Number(event.target.value));
+    if (!isWorking) {
+      setTimeLeft(Number(event.target.value) * 60);
+    }
   };
-  function handleTimerChange(event: React.ChangeEvent<HTMLInputElement>) {
-    const newValue = parseFloat(event.target.value);
-    setTime(newValue);
-    console.log(newValue);
-  }
+
   return (
     <>
-      <CountDownBox value={time} time={time} />
-      <Modal />
+      <CountDownBox timeLeft={timeLeft} />
+
       <div className={classes.box}>
         <div className={classes.container}>
           {!isRunning ? (
-            <p onClick={handleStartStopClick}> Start</p>
+            <p onClick={handleStart}> Start</p>
           ) : (
-            <p onClick={handleStartStopClick}> Stop</p>
+            <p onClick={handlePause}> Stop</p>
           )}
-          <input value={time} onChange={handleTimerChange}></input>
-          <div>{time}</div>
+          <input onChange={handleWorkTimeChange}></input>
+          <input onChange={handleBreakTimeChange}></input>
+          <div></div>
         </div>
         <div className={classes.container}>
-          <p onClick={handleResetClick}>Reset</p>
+          <p onClick={handleReset}>Reset</p>
         </div>
       </div>
     </>

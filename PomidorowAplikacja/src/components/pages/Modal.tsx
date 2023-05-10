@@ -7,6 +7,7 @@ const Modal = ({ open, onClose }: any) => {
       <div className={classes.backdrop} onClick={onClose}></div>
       <div className={classes.modal}>
         <button onClick={onClose}>escape</button>
+        <div className={classes.box}></div>
       </div>
     </>,
 

@@ -1,3 +1,3 @@
-export type Note = {
-  id: any;
+export const stage = {
+  pomodotoTime: 60,
 };
