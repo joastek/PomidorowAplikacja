@@ -1,30 +1,21 @@
 import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import MainPage from "./components/pages/MainPage";
 import About from "./components/pages/About";
 import NavigationBar from "./components/NavIcons/Navigationbar";
 import ErrorPage from "./components/pages/Error";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <NavigationBar />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/",
-        element: <MainPage />,
-      },
-      { path: "/about", element: <About /> },
-    ],
-  },
-]);
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <RouterProvider router={router} />
-    </>
+    <Routes>
+      <Route path="/" element={<NavigationBar />}>
+        {" "}
+        <Route path="/" element={<MainPage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/*" errorElement={<ErrorPage />}></Route>
+      </Route>
+    </Routes>
   );
 }
 
