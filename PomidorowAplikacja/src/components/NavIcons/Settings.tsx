@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import classes from "./Settings.module.css";
 import Modal from "../pages/Modal";
 import { useState } from "react";
-function Settings() {
+function Settings({ handleWorkTimeChange }: any) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
@@ -20,7 +20,11 @@ function Settings() {
           />
         </svg>
       </motion.div>
-      <Modal open={isOpen} onClose={() => setIsOpen(false)}></Modal>
+      <Modal
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        handleWorkTimeChange={handleWorkTimeChange}
+      ></Modal>
     </>
   );
 }

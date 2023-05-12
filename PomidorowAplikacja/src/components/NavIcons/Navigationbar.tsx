@@ -8,7 +8,7 @@ import Logo from "./Logo";
 import Home from "./Home";
 import Footer from "../footer/Footer";
 
-const NavigationBar = () => {
+const NavigationBar = ({ handleWorkTimeChange }: any) => {
   return (
     <>
       <Logo />
@@ -29,7 +29,7 @@ const NavigationBar = () => {
         >
           <Information />
         </NavLink>
-        <Settings />
+        <Settings handleWorkTimeChange={handleWorkTimeChange} />
       </nav>
 
       <Footer />
