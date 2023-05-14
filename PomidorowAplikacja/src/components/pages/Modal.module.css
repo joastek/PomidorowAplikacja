@@ -10,28 +10,45 @@
 
 .modal {
   position: fixed;
-  top: 20vh;
-  left: 5%;
-  width: 90%;
+  top: 10vh;
+  left: calc(50% - 30rem);
+  width: 60rem;
   background-color: white;
-  padding: 1rem;
-  border-radius: 14px;
+
+  border-radius: 6.6rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 30;
   animation: slide-down 300ms ease-out forwards;
 }
-.box {
-  width: 5rem;
-  height: 5rem;
-  background-color: red;
+
+h1 {
   position: relative;
+  text-align: center;
+  font-size: 8.8rem;
+  font-weight: 700;
+  line-height: 2rem;
+  font-family: "Rowdies";
+  padding-bottom: 0.5em;
+  border-bottom: 5px solid black;
 }
-@media (min-width: 768px) {
+.box {
+  font-family: "Rowdies";
+  font-size: 5rem;
+  position: relative;
+  margin-left: 3rem;
+  width: 14.7rem;
+  height: 6rem;
+
+  background: #fdeaea;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 1.4rem;
+}
+/* @media (min-width: 768px) {
   .modal {
     width: 40rem;
     left: calc(50% - 20rem);
   }
-}
+} */
 
 @keyframes slide-down {
   from {

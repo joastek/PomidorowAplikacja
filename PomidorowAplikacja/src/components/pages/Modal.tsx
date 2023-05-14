@@ -6,10 +6,14 @@ const Modal = ({ open, onClose, handleWorkTimeChange }: any) => {
     <>
       <div className={classes.backdrop} onClick={onClose}></div>
       <div className={classes.modal}>
+        <h1>Ustawienia</h1>
+
+        <input
+          type="text"
+          onChange={handleWorkTimeChange}
+          className={classes.box}
+        ></input>
         <button onClick={onClose}>escape</button>
-        <div className={classes.box}>
-          <input type="text" onChange={handleWorkTimeChange}></input>
-        </div>
       </div>
     </>,
 
