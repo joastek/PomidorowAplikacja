@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 const About = () => {
   return (
     <h1>
-      go to <Link to="/">menu</Link>
+      go to  sss<Link to="/">menu</Link>
     </h1>
   );
 };
