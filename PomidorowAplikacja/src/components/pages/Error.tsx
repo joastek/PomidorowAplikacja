@@ -1,5 +1,5 @@
 function ErrorPage() {
-  return <p> you suck :(</p>;
+  return <p> you suc :(</p>;
 }
 
 export default ErrorPage;
