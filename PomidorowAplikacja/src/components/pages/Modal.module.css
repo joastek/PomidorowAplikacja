@@ -14,13 +14,18 @@
   left: calc(50% - 30rem);
   width: 60rem;
   background-color: white;
-
+  padding: 2rem;
   border-radius: 6.6rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 30;
   animation: slide-down 300ms ease-out forwards;
 }
 
+.icons {
+  float: left;
+  height: 6rem;
+  width: 6rem;
+}
 h1 {
   position: relative;
   text-align: center;
@@ -31,17 +36,28 @@ h1 {
   padding-bottom: 0.5em;
   border-bottom: 5px solid black;
 }
-.box {
+input {
   font-family: "Rowdies";
   font-size: 5rem;
   position: relative;
   margin-left: 3rem;
   width: 14.7rem;
-  height: 6rem;
+  height: 4rem;
 
   background: #fdeaea;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 1.4rem;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 /* @media (min-width: 768px) {
   .modal {
