@@ -1,7 +1,5 @@
 import classes from "./ActionButtons.module.css";
 import CountDownBox from "./CountdownBox";
-import Settings from "../NavIcons/Settings";
-import Modal from "../pages/Modal";
 
 const ActionButtons: React.FC = ({
   timeLeft,
@@ -23,8 +21,7 @@ const ActionButtons: React.FC = ({
           ) : (
             <p onClick={handlePause}> Stop</p>
           )}
-          <input onChange={handleWorkTimeChange}></input>
-          <input onChange={handleBreakTimeChange}></input>
+
           <div></div>
         </div>
         <div className={classes.container}>

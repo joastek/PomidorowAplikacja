@@ -1,17 +1,20 @@
 import { NavLink } from "react-router-dom";
 import { Outlet } from "react-router-dom";
-
+import { motion } from "framer-motion";
 import Settings from "./Settings";
-import Information from "./Information";
 import classes from "./NavigationBar.module.css";
-import Logo from "./Logo";
-import Home from "./Home";
-import Footer from "../footer/Footer";
 
-const NavigationBar = ({ handleWorkTimeChange }: any) => {
+import Footer from "../footer/Footer";
+import infIcon from "../icons/Infromation.png";
+import logo from "../icons/Logo.png";
+import homeIcon from "../icons/home.png";
+const NavigationBar = ({
+  handleWorkTimeChange,
+  handleBreakTimeChange,
+}: any) => {
   return (
     <>
-      <Logo />
+      <img className={classes.logo} src={logo} />
       <nav className={classes.nav}>
         <NavLink
           to="/"
@@ -19,7 +22,9 @@ const NavigationBar = ({ handleWorkTimeChange }: any) => {
             isActive ? classes.active : undefined
           }
         >
-          <Home />
+          <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
+            <img className={classes.icon} src={homeIcon} />
+          </motion.div>
         </NavLink>
         <NavLink
           to="/about"
@@ -27,9 +32,14 @@ const NavigationBar = ({ handleWorkTimeChange }: any) => {
             isActive ? classes.active : undefined
           }
         >
-          <Information />
+          <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
+            <img className={classes.icon} src={infIcon} />
+          </motion.div>
         </NavLink>
-        <Settings handleWorkTimeChange={handleWorkTimeChange} />
+        <Settings
+          handleWorkTimeChange={handleWorkTimeChange}
+          handleBreakTimeChange={handleBreakTimeChange}
+        />
       </nav>
 
       <Footer />

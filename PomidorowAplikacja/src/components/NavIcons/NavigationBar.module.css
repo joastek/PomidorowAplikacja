@@ -9,3 +9,13 @@ nav {
   background-color: #ef6348;
   border-radius: 40%;
 }
+.logo {
+  width: 60rem;
+  height: 20rem;
+}
+.icon {
+  height: 5rem;
+  width: 5rem;
+  padding: 3rem;
+  cursor: pointer;
+}

@@ -1,18 +1,47 @@
 import classes from "./Modal.module.css";
 import ReactDom from "react-dom";
 import logo from "../icons/ClockCircleOutlined.png";
-const Modal = ({ open, onClose, handleWorkTimeChange }: any) => {
+import theme from "../icons/image.png";
+const Modal = ({
+  open,
+  onClose,
+  handleWorkTimeChange,
+  handleBreakTimeChange,
+}: any) => {
   if (!open) return null;
   return ReactDom.createPortal(
     <>
-      <div className={classes.backdrop} onClick={onClose}></div>
+      <div className={classes.backdrop} onClick={onClose} />
       <div className={classes.modal}>
         <h1>Ustawienia</h1>
-        <div>
+        <div className={classes.headerBox}>
           <img className={classes.logo} src={logo} />
-          <div>Czas Pracy</div>
+          <div className={classes.headerTitle}>Stoper</div>
         </div>
-        <input type="number" onChange={handleWorkTimeChange} max={99}></input>
+        <div className={classes.setBox}>
+          <div className={classes.setting}>
+            <input
+              type="number"
+              onChange={handleWorkTimeChange}
+              min={1}
+              max={99}
+            />
+            <div className={classes.workDesc}> Czas pracy</div>{" "}
+          </div>
+          <div className={classes.setting}>
+            <input
+              type="number"
+              onChange={handleBreakTimeChange}
+              min={1}
+              max={99}
+            />
+            <div className={classes.workDesc}> Przerwa</div>{" "}
+          </div>
+        </div>
+        <div className={classes.headerBox}>
+          <img className={classes.logo} src={theme} />
+          <div className={classes.headerTitle}>Motyw</div>
+        </div>
         <button onClick={onClose}>Zatwierdź</button>
       </div>
     </>,

@@ -60,7 +60,12 @@ function App() {
     <Routes>
       <Route
         path="/"
-        element={<NavigationBar handleWorkTimeChange={handleWorkTimeChange} />}
+        element={
+          <NavigationBar
+            handleWorkTimeChange={handleWorkTimeChange}
+            handleBreakTimeChange={handleBreakTimeChange}
+          />
+        }
       >
         {" "}
         <Route
