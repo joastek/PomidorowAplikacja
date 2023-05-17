@@ -105,6 +105,11 @@ input[type="number"] {
   padding: 2rem;
   margin-bottom: 1rem;
 }
+
+.colorContainer {
+}
+.themeColor {
+}
 /* .workDesc {
   display: block;
 } */

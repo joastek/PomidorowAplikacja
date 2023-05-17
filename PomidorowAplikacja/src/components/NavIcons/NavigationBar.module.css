@@ -19,3 +19,8 @@ nav {
   padding: 3rem;
   cursor: pointer;
 }
+.box {
+  width: 2rem;
+  height: 2rem;
+  background-color: yellow;
+}

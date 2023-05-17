@@ -1,17 +1,19 @@
 import { NavLink } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useContext } from "react";
 import Settings from "./Settings";
 import classes from "./NavigationBar.module.css";
-
 import Footer from "../footer/Footer";
 import infIcon from "../icons/Infromation.png";
 import logo from "../icons/Logo.png";
 import homeIcon from "../icons/home.png";
+import { BackgroundColorContext } from "../models/Background";
 const NavigationBar = ({
   handleWorkTimeChange,
   handleBreakTimeChange,
 }: any) => {
+  const { backgroundColor } = useContext(BackgroundColorContext);
   return (
     <>
       <img className={classes.logo} src={logo} />
@@ -26,6 +28,7 @@ const NavigationBar = ({
             <img className={classes.icon} src={homeIcon} />
           </motion.div>
         </NavLink>
+        <div className={classes.box} />
         <NavLink
           to="/about"
           className={({ isActive }: any) =>
@@ -36,6 +39,7 @@ const NavigationBar = ({
             <img className={classes.icon} src={infIcon} />
           </motion.div>
         </NavLink>
+        <div className={classes.box} style={{ backgroundColor }}></div>
         <Settings
           handleWorkTimeChange={handleWorkTimeChange}
           handleBreakTimeChange={handleBreakTimeChange}

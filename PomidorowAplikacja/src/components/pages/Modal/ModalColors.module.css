@@ -1,0 +1,44 @@
+.colorContainer {
+  display: flex;
+  place-items: center;
+
+  margin-left: 5rem;
+  margin-right: 5rem;
+  max-width: 100%;
+}
+.themeColor_1 {
+  border: 0.5rem solid;
+  margin: 3rem;
+  flex: auto;
+  width: 3rem;
+  height: 4rem;
+  background-color: rgb(12, 57, 205);
+}
+.themeColor_2 {
+  margin: 3rem;
+  flex: auto;
+  width: 3rem;
+  height: 4rem;
+  background-color: red;
+}
+.themeColor_3 {
+  margin: 3rem;
+  flex: auto;
+  width: 3rem;
+  height: 4rem;
+  background-color: red;
+}
+.themeColor_4 {
+  margin: 3rem;
+  flex: auto;
+  width: 3rem;
+  height: 4rem;
+  background-color: red;
+}
+.themeColor_5 {
+  margin: 3rem;
+  flex: auto;
+  width: 3rem;
+  height: 4rem;
+  background-color: red;
+}

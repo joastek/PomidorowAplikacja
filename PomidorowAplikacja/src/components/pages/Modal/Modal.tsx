@@ -1,7 +1,8 @@
 import classes from "./Modal.module.css";
+import colors from "./ModalColors.module.css";
 import ReactDom from "react-dom";
-import logo from "../icons/ClockCircleOutlined.png";
-import theme from "../icons/image.png";
+import logo from "../../icons/ClockCircleOutlined.png";
+import theme from "../../icons/image.png";
 const Modal = ({
   open,
   onClose,
@@ -41,6 +42,13 @@ const Modal = ({
         <div className={classes.headerBox}>
           <img className={classes.logo} src={theme} />
           <div className={classes.headerTitle}>Motyw</div>
+        </div>
+        <div className={colors.colorContainer}>
+          <div className={colors.themeColor_1} />
+          <div className={colors.themeColor_2} />
+          <div className={colors.themeColor_3} />
+          <div className={colors.themeColor_4} />
+          <div className={colors.themeColor_5} />
         </div>
         <button onClick={onClose}>Zatwierdź</button>
       </div>
