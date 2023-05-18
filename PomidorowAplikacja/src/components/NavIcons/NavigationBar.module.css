@@ -1,16 +1,22 @@
-nav {
-  position: absolute;
-  top: 0rem;
-  right: 3rem;
-  padding: 2rem;
+.navBar {
+  background-color: #f9ab55;
   display: flex;
+  position: relative;
+  width: 100vw;
+  justify-content: space-between;
+}
+.navIcons {
+  display: flex;
+  padding: 4rem;
+  height: 11rem;
 }
 .active {
   background-color: #ef6348;
   border-radius: 40%;
 }
 .logo {
-  width: 60rem;
+  background-color: #f9ab55;
+  width: 1rem;
   height: 20rem;
 }
 .icon {

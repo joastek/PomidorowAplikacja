@@ -7,14 +7,20 @@
   max-width: 100%;
 }
 .themeColor_1 {
-  border: 0.5rem solid;
+  cursor: pointer;
+
   margin: 3rem;
   flex: auto;
   width: 3rem;
   height: 4rem;
   background-color: rgb(12, 57, 205);
 }
+.active {
+  background-color: #ef6348;
+  border-radius: 40%;
+}
 .themeColor_2 {
+  cursor: pointer;
   margin: 3rem;
   flex: auto;
   width: 3rem;
@@ -22,23 +28,26 @@
   background-color: red;
 }
 .themeColor_3 {
+  cursor: pointer;
   margin: 3rem;
   flex: auto;
   width: 3rem;
   height: 4rem;
-  background-color: red;
+  background-color: rgb(11, 179, 98);
 }
 .themeColor_4 {
+  cursor: pointer;
   margin: 3rem;
   flex: auto;
   width: 3rem;
   height: 4rem;
-  background-color: red;
+  background-color: rgb(214, 9, 128);
 }
 .themeColor_5 {
+  cursor: pointer;
   margin: 3rem;
   flex: auto;
   width: 3rem;
   height: 4rem;
-  background-color: red;
+  background-color: rgb(223, 243, 5);
 }

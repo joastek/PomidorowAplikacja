@@ -1,9 +1,8 @@
 import classes from "./ActionButtons.module.css";
-import CountDownBox from "./CountdownBox";
+
 import { useContext } from "react";
 import { BackgroundColorContext } from "../models/Background";
 const ActionButtons: React.FC = ({
-  timeLeft,
   isRunning,
   handleStart,
   handlePause,
@@ -18,8 +17,6 @@ const ActionButtons: React.FC = ({
   };
   return (
     <>
-      <CountDownBox timeLeft={timeLeft} />
-
       <div className={classes.box}>
         <div className={classes.container}>
           {!isRunning ? (

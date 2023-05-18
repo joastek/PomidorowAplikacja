@@ -1,11 +1,12 @@
 import "./App.css";
 import React, { useState, useEffect, createContext } from "react";
-
+import color from "./App.css";
 import About from "./components/pages/About";
 import NavigationBar from "./components/NavIcons/Navigationbar";
 import ErrorPage from "./components/pages/Error";
 import { Route, Routes } from "react-router-dom";
 import ActionButtons from "./components/timer/ActionButtons";
+import CountDownBox from "./components/timer/CountdownBox";
 
 function App() {
   const [workTime, setWorkTime] = useState(25);
@@ -57,35 +58,35 @@ function App() {
     }
   };
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <NavigationBar
-            handleWorkTimeChange={handleWorkTimeChange}
-            handleBreakTimeChange={handleBreakTimeChange}
-          />
-        }
-      >
-        {" "}
+    <>
+      <Routes>
         <Route
           path="/"
           element={
-            <ActionButtons
-              timeLeft={timeLeft}
-              isRunning={isRunning}
-              handleStart={handleStart}
-              handlePause={handlePause}
-              handleReset={handleReset}
+            <NavigationBar
               handleWorkTimeChange={handleWorkTimeChange}
               handleBreakTimeChange={handleBreakTimeChange}
             />
           }
-        />
-        <Route path="/about" element={<About />} />
-        <Route path="/*" errorElement={<ErrorPage />}></Route>
-      </Route>
-    </Routes>
+        >
+          {" "}
+          <Route
+            path="/"
+            element={
+              <CountDownBox
+                timeLeft={timeLeft}
+                isRunning={isRunning}
+                handleStart={handleStart}
+                handlePause={handlePause}
+                handleReset={handleReset}
+              />
+            }
+          />
+          <Route path="/about" element={<About />} />
+          <Route path="/*" errorElement={<ErrorPage />}></Route>
+        </Route>
+      </Routes>
+    </>
   );
 }
 

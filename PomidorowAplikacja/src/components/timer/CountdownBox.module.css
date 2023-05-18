@@ -1,11 +1,29 @@
+.container {
+  background-color: #b06616;
+  width: 100vw;
+
+  position: relative;
+  height: 50rem;
+}
+.timer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons {
+  width: 100vw;
+  height: 20rem;
+  background-color: red;
+}
 .box_1 {
   width: 47rem;
   height: 26rem;
-
+  position: absolute;
   border: 5px solid #000000;
   background: #ef6348;
   z-index: 3;
-  position: absolute;
 }
 .box_2 {
   width: 47rem;
@@ -14,10 +32,10 @@
   background: #2669b8;
   z-index: 2;
   position: absolute;
-
   transform: matrix(0.99, -0.17, 0.16, 0.99, 0, 0);
 }
 .box_3 {
+  position: absolute;
   z-index: 1;
   width: 47rem;
   height: 26rem;
@@ -35,11 +53,4 @@
   align-items: center;
   line-height: 2rem;
   font-family: "Rowdies", cursive;
-}
-.container {
-  width: 100%;
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
 }

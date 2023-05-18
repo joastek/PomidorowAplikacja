@@ -16,36 +16,37 @@ const NavigationBar = ({
   const { backgroundColor } = useContext(BackgroundColorContext);
   return (
     <>
-      <img className={classes.logo} src={logo} />
-      <nav className={classes.nav}>
-        <NavLink
-          to="/"
-          className={({ isActive }: any) =>
-            isActive ? classes.active : undefined
-          }
-        >
-          <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
-            <img className={classes.icon} src={homeIcon} />
-          </motion.div>
-        </NavLink>
-        <div className={classes.box} />
-        <NavLink
-          to="/about"
-          className={({ isActive }: any) =>
-            isActive ? classes.active : undefined
-          }
-        >
-          <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
-            <img className={classes.icon} src={infIcon} />
-          </motion.div>
-        </NavLink>
-        <div className={classes.box} style={{ backgroundColor }}></div>
-        <Settings
-          handleWorkTimeChange={handleWorkTimeChange}
-          handleBreakTimeChange={handleBreakTimeChange}
-        />
-      </nav>
+      <div className={classes.navBar}>
+        <img src={logo} />
+        <div className={classes.navIcons}>
+          <NavLink
+            to="/"
+            className={({ isActive }: any) =>
+              isActive ? classes.active : undefined
+            }
+          >
+            <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
+              <img className={classes.icon} src={homeIcon} />
+            </motion.div>
+          </NavLink>
 
+          <NavLink
+            to="/about"
+            className={({ isActive }: any) =>
+              isActive ? classes.active : undefined
+            }
+          >
+            <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
+              <img className={classes.icon} src={infIcon} />
+            </motion.div>
+          </NavLink>
+          {/* <div className={classes.box} style={{ backgroundColor }}></div> */}
+          <Settings
+            handleWorkTimeChange={handleWorkTimeChange}
+            handleBreakTimeChange={handleBreakTimeChange}
+          />
+        </div>
+      </div>
       <Footer />
       <Outlet></Outlet>
     </>
