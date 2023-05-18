@@ -1,7 +1,8 @@
 import Footer from "../footer/Footer";
 import ActionButtons from "./ActionButtons";
 import classes from "./CountdownBox.module.css";
-
+import { useContext } from "react";
+import { BackgroundColorContext } from "../models/Background";
 const CountDownBox = ({
   timeLeft,
   isRunning,
@@ -9,9 +10,10 @@ const CountDownBox = ({
   handlePause,
   handleReset,
 }: any) => {
+  const { backgroundColor } = useContext(BackgroundColorContext);
   return (
     <>
-      <div className={classes.container}>
+      <div className={classes.container} style={{ backgroundColor }}>
         <div className={classes.timer}>
           <div className={classes.box_1}>
             <div className={classes.text}>{`${Math.floor(timeLeft / 60)

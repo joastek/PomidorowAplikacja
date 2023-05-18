@@ -16,7 +16,7 @@ const NavigationBar = ({
   const { backgroundColor } = useContext(BackgroundColorContext);
   return (
     <>
-      <div className={classes.navBar}>
+      <div className={classes.navBar} style={{ backgroundColor }}>
         <img src={logo} />
         <div className={classes.navIcons}>
           <NavLink

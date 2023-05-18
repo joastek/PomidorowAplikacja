@@ -8,16 +8,11 @@ const ActionButtons: React.FC = ({
   handlePause,
   handleReset,
 }: any) => {
-  const { backgroundColor, setBackgroundColor }: any = useContext(
-    BackgroundColorContext
-  );
-  const black = "purple";
-  const handleColorChange = () => {
-    setBackgroundColor(black);
-  };
+  const { backgroundColor }: any = useContext(BackgroundColorContext);
+
   return (
     <>
-      <div className={classes.box}>
+      <div className={classes.box} style={{ backgroundColor }}>
         <div className={classes.container}>
           {!isRunning ? (
             <p onClick={handleStart}> Start</p>
@@ -28,9 +23,6 @@ const ActionButtons: React.FC = ({
           <div></div>
         </div>
         <div className={classes.container}>
-          <div style={{ backgroundColor }}>
-            <p onClick={handleColorChange}>TEST</p>
-          </div>
           <p onClick={handleReset}>Reset</p>
         </div>
       </div>
