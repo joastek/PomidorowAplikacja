@@ -51,3 +51,8 @@
   height: 4rem;
   background-color: rgb(223, 243, 5);
 }
+
+.active {
+  background-color: #ef6348;
+  border-radius: 40%;
+}
