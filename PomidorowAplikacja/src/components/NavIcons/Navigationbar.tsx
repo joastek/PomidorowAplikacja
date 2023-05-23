@@ -47,7 +47,7 @@ const NavigationBar = ({
           />
         </div>
       </div>
-      <Footer />
+    
       <Outlet></Outlet>
     </>
   );

@@ -1,7 +1,7 @@
 import Footer from "../footer/Footer";
 import ActionButtons from "./ActionButtons";
 import classes from "./CountdownBox.module.css";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { BackgroundColorContext } from "../models/Background";
 const CountDownBox = ({
   timeLeft,
@@ -11,6 +11,13 @@ const CountDownBox = ({
   handleReset,
 }: any) => {
   const { backgroundColor } = useContext(BackgroundColorContext);
+
+  useEffect(() => {
+    document.title = `${Math.floor(timeLeft / 60)
+      .toString()
+      .padStart(2, "0")}:${(timeLeft % 60).toString().padStart(2, "0")}`;
+  });
+
   return (
     <>
       <div className={classes.container} style={{ backgroundColor }}>

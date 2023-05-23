@@ -2,12 +2,12 @@
   background-color: #f9ab55;
   display: flex;
   position: relative;
-  width: 100vw;
+  width: auto;
   justify-content: space-between;
 }
 .navIcons {
   display: flex;
-  padding: 4rem;
+  padding: 2rem;
   height: 11rem;
 }
 .active {

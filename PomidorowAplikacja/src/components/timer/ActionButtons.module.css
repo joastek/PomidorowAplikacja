@@ -1,8 +1,9 @@
 .box {
   display: flex;
-  height: 100%;
+  height: auto;
   justify-content: center;
   align-items: center;
+  padding: 2.5rem;
 }
 
 .container {

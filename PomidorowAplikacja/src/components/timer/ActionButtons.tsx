@@ -2,6 +2,7 @@ import classes from "./ActionButtons.module.css";
 
 import { useContext } from "react";
 import { BackgroundColorContext } from "../models/Background";
+import Footer from "../footer/Footer";
 const ActionButtons: React.FC = ({
   isRunning,
   handleStart,
@@ -26,6 +27,7 @@ const ActionButtons: React.FC = ({
           <p onClick={handleReset}>Reset</p>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
