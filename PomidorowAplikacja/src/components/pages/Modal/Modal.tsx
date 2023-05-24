@@ -1,8 +1,8 @@
 import classes from "./Modal.module.css";
 import ModalColors from "./ModalColors";
 import ReactDom from "react-dom";
-import logo from "../../icons/ClockCircleOutlined.png";
-import theme from "../../icons/image.png";
+import clock from "../../../styles/icons/ClockCircleOutlined.png";
+import theme from "../../../styles/icons/image.png";
 const Modal = ({
   open,
   onClose,
@@ -16,7 +16,7 @@ const Modal = ({
       <div className={classes.modal}>
         <h1>Ustawienia</h1>
         <div className={classes.headerBox}>
-          <img className={classes.logo} src={logo} />
+          <img className={classes.logo} src={clock} />
           <div className={classes.headerTitle}>Stoper</div>
         </div>
         <div className={classes.setBox}>

@@ -1,11 +1,11 @@
-import "./App.css";
-import React, { useState, useEffect, createContext } from "react";
-import color from "./App.css";
+import "../src/styles/App.css";
+import { useState, useEffect } from "react";
+
 import About from "./components/pages/About";
-import NavigationBar from "./components/NavIcons/Navigationbar";
+import NavigationBar from "./components/NavBar/Navigationbar";
 import ErrorPage from "./components/pages/Error";
 import { Route, Routes } from "react-router-dom";
-import ActionButtons from "./components/timer/ActionButtons";
+
 import CountDownBox from "./components/timer/CountdownBox";
 
 function App() {

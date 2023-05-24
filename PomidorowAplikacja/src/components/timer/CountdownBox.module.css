@@ -5,6 +5,16 @@
   position: relative;
   height: auto;
 }
+@media (max-width: 1200px) {
+  .container {
+    background-color: red;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    background-color: rgb(3, 19, 106);
+  }
+}
 .timer {
   width: auto;
   height: 44.4rem;
