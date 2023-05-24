@@ -4,13 +4,13 @@ import App from "./App.tsx";
 import "./index.scss";
 
 import { BrowserRouter } from "react-router-dom";
-import { BackgroundColorProvider } from "./components/models/Background.tsx";
+// import { BackgroundColorProvider } from "./components/models/Background.tsx";
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <BackgroundColorProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>{" "}
-    </BackgroundColorProvider>
+    {/* <BackgroundColorProvider> */}
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>{" "}
+    {/* </BackgroundColorProvider> */}
   </React.StrictMode>
 );
