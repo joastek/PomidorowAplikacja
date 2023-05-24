@@ -7,10 +7,10 @@ import { BrowserRouter } from "react-router-dom";
 import { BackgroundColorProvider } from "./components/models/Background.tsx";
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <BackgroundColorProvider>
+    <BackgroundColorProvider>
+      <BrowserRouter>
         <App />
-      </BackgroundColorProvider>
-    </BrowserRouter>
+      </BrowserRouter>{" "}
+    </BackgroundColorProvider>
   </React.StrictMode>
 );

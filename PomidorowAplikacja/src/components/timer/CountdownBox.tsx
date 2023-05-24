@@ -1,4 +1,3 @@
-import Footer from "../footer/Footer";
 import ActionButtons from "./ActionButtons";
 import classes from "./CountdownBox.module.css";
 import { useContext } from "react";
