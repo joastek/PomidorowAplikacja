@@ -4,11 +4,11 @@ import { useContext } from "react";
 import { BackgroundColorContext } from "../models/Background";
 const CountDownBox = ({
   timeLeft,
-  isRunning,
-  handleStart,
-  handlePause,
-  handleReset,
-}: any) => {
+}: // isRunning,
+// handleStart,
+// handlePause,
+// handleReset,
+any) => {
   const { backgroundColor } = useContext(BackgroundColorContext);
 
   return (
@@ -27,10 +27,10 @@ const CountDownBox = ({
         </div>
         <div className={classes.buttons}>
           <ActionButtons
-            isRunning={isRunning}
-            handleStart={handleStart}
-            handlePause={handlePause}
-            handleReset={handleReset}
+          // isRunning={isRunning}
+          // handleStart={handleStart}
+          // handlePause={handlePause}
+          // handleReset={handleReset}
           />
         </div>
       </div>
