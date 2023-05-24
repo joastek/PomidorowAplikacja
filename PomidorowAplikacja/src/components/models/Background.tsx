@@ -1,5 +1,5 @@
-import React, { createContext, useState } from "react";
-import classes from "../NavIcons/NavigationBar.module.css";
+import { createContext, useState } from "react";
+
 interface BackgroundColorContextProps {
   backgroundColor: string;
   setBackgroundColor: (color: string) => void;
@@ -13,7 +13,7 @@ export const BackgroundColorContext =
     setBackgroundColor: () => {},
   });
 
-export const BackgroundColorProvider: React.FC = ({ children }: any) => {
+export const BackgroundColorProvider = ({ children }: any) => {
   const [backgroundColor, setBackgroundColor] = useState(
     defaultBackgroundColor
   );
