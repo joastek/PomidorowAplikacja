@@ -18,7 +18,7 @@
 }
 
 .logo {
-  background-color: #f9ab55;
+  background-color: #110f0d;
   width: 1rem;
   height: 20rem;
 }
@@ -33,5 +33,5 @@
 .box {
   width: 2rem;
   height: 2rem;
-  background-color: #4f4f3c;
-}
+  background-color: rgb(79, 79, 60);
+}/*# sourceMappingURL=NavBar.css.map */
