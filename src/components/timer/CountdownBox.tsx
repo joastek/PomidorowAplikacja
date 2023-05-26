@@ -13,10 +13,10 @@ const CountDownBox = ({
 
   return (
     <>
-      <div className="container1" style={{ backgroundColor }}>
+      <div className="home_container" style={{ backgroundColor }}>
         <div className="timer">
           <div className="box_1">
-            <div className="text">{`${Math.floor(timeLeft / 60)
+            <div className="home_text">{`${Math.floor(timeLeft / 60)
               .toString()
               .padStart(2, "0")}:${(timeLeft % 60)
               .toString()

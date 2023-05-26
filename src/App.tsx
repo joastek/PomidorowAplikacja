@@ -1,4 +1,4 @@
-import "../src/styles/App.css";
+import "../src/styles/App.scss";
 import { useState, useEffect } from "react";
 
 import About from "./components/pages/About";
