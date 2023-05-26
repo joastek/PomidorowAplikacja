@@ -1,4 +1,4 @@
-import colors from "./ModalColors.module.css";
+import "../../../styles/pages/ModalColors.scss";
 import { useContext } from "react";
 import { BackgroundColorContext } from "../../models/Background";
 const ModalColors = () => {
@@ -30,12 +30,12 @@ const ModalColors = () => {
 
   return (
     <>
-      <div className={colors.colorContainer}>
-        <div className={colors.themeColor_1} onClick={handleColorChange} />
-        <div className={colors.themeColor_2} onClick={handleColorChange2} />
-        <div className={colors.themeColor_3} onClick={handleColorChange3} />
-        <div className={colors.themeColor_4} onClick={handleColorChange4} />
-        <div className={colors.themeColor_5} onClick={handleColorChange5} />
+      <div className="colorContainer">
+        <div className="themeColor_1" onClick={handleColorChange} />
+        <div className="themeColor_2" onClick={handleColorChange2} />
+        <div className="themeColor_3" onClick={handleColorChange3} />
+        <div className="themeColor_4 " onClick={handleColorChange4} />
+        <div className="themeColor_5" onClick={handleColorChange5} />
       </div>
     </>
   );

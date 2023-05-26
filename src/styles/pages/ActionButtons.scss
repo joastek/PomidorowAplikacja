@@ -1,0 +1,25 @@
+.button_box_container {
+  display: flex;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+}
+
+.button_container {
+  width: 40rem;
+  height: 9rem;
+  background: #f5bb12;
+  border: 5px solid #000000;
+  margin-left: 5rem;
+  cursor: pointer;
+}
+
+p {
+  font-family: "Rowdies";
+
+  font-weight: 700;
+  font-size: 6.4rem;
+  margin: 0 auto;
+  text-align: center;
+}

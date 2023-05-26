@@ -1,5 +1,5 @@
 import ActionButtons from "./ActionButtons";
-import classes from "./CountdownBox.module.css";
+import "../../styles/pages/CountodwonBox.scss";
 import { useContext } from "react";
 import { BackgroundColorContext } from "../models/Background";
 const CountDownBox = ({
@@ -13,19 +13,19 @@ const CountDownBox = ({
 
   return (
     <>
-      <div className={classes.container} style={{ backgroundColor }}>
-        <div className={classes.timer}>
-          <div className={classes.box_1}>
-            <div className={classes.text}>{`${Math.floor(timeLeft / 60)
+      <div className="container1" style={{ backgroundColor }}>
+        <div className="timer">
+          <div className="box_1">
+            <div className="text">{`${Math.floor(timeLeft / 60)
               .toString()
               .padStart(2, "0")}:${(timeLeft % 60)
               .toString()
               .padStart(2, "0")}`}</div>
           </div>
-          <div className={classes.box_2}></div>
-          <div className={classes.box_3}></div>
+          <div className="box_2"></div>
+          <div className="box_3"></div>
         </div>
-        <div className={classes.buttons}>
+        <div className="buttons">
           <ActionButtons
             isRunning={isRunning}
             handleStart={handleStart}

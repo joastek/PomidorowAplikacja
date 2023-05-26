@@ -1,8 +1,7 @@
-import classes from "./ActionButtons.module.css";
-
 import { useContext } from "react";
 import { BackgroundColorContext } from "../models/Background";
 import Footer from "../footer/Footer";
+import "../../styles/pages/ActionButtons.scss";
 const ActionButtons: React.FC = ({
   isRunning,
   handleStart,
@@ -13,8 +12,8 @@ const ActionButtons: React.FC = ({
 
   return (
     <>
-      <div className={classes.box} style={{ backgroundColor }}>
-        <div className={classes.container}>
+      <div className="button_box_container" style={{ backgroundColor }}>
+        <div className="button_container">
           {!isRunning ? (
             <p onClick={handleStart}> Start</p>
           ) : (
@@ -23,7 +22,7 @@ const ActionButtons: React.FC = ({
 
           <div></div>
         </div>
-        <div className={classes.container}>
+        <div className="button_container">
           <p onClick={handleReset}>Reset</p>
         </div>
       </div>

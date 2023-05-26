@@ -3,8 +3,7 @@ import { Outlet } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import Settings from "./Settings";
-import classes from "./NavigationBar.module.css";
-
+import "../../styles/pages/NavBar.scss";
 import infIcon from "../../styles/icons/Infromation.png";
 import logo from "../../styles/icons/Logo.png";
 import homeIcon from "../../styles/icons/home.png";
@@ -16,28 +15,24 @@ const NavigationBar = ({
   const { backgroundColor } = useContext(BackgroundColorContext);
   return (
     <>
-      <div className={classes.navBar} style={{ backgroundColor }}>
+      <div className="navBar" style={{ backgroundColor }}>
         <img src={logo} />
-        <div className={classes.navIcons}>
+        <div className="navIcons">
           <NavLink
             to="/"
-            className={({ isActive }: any) =>
-              isActive ? classes.active : undefined
-            }
+            className={({ isActive }: any) => (isActive ? "active" : undefined)}
           >
             <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
-              <img className={classes.icon} src={homeIcon} />
+              <img className="icon" src={homeIcon} />
             </motion.div>
           </NavLink>
 
           <NavLink
             to="/about"
-            className={({ isActive }: any) =>
-              isActive ? classes.active : undefined
-            }
+            className={({ isActive }: any) => (isActive ? "active" : undefined)}
           >
             <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
-              <img className={classes.icon} src={infIcon} />
+              <img className="icon" src={infIcon} />
             </motion.div>
           </NavLink>
           {/* <div className={classes.box} style={{ backgroundColor }}></div> */}
