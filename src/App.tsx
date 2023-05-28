@@ -8,7 +8,7 @@ import { Route, Routes } from "react-router-dom";
 
 import CountDownBox from "./components/timer/CountdownBox";
 
-const App: React.FC = () => {
+const App = () => {
   const [workTime, setWorkTime] = useState(25);
   const [breakTime, setBreakTime] = useState(5);
   const [isRunning, setIsRunning] = useState(false);

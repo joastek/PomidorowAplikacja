@@ -1,14 +1,23 @@
+import React from "react";
 import ActionButtons from "./ActionButtons";
 import "../../styles/pages/CountodwonBox.scss";
 import { useContext } from "react";
 import { BackgroundColorContext } from "../models/Background";
-const CountDownBox = ({
+interface CountDownBoxProps {
+  timeLeft: number;
+  isRunning: boolean;
+  handleStart: () => void;
+  handlePause: () => void;
+  handleReset: () => void;
+}
+
+const CountDownBox: React.FC<CountDownBoxProps> = ({
   timeLeft,
   isRunning,
   handleStart,
   handlePause,
   handleReset,
-}: any) => {
+}) => {
   const { backgroundColor } = useContext(BackgroundColorContext);
 
   return (
