@@ -2,12 +2,20 @@ import { useContext } from "react";
 import { BackgroundColorContext } from "../models/Background";
 import Footer from "../footer/Footer";
 import "../../styles/pages/ActionButtons.scss";
-const ActionButtons: React.FC = ({
+interface CountDownBoxProps {
+  timeLeft: number;
+  isRunning: boolean;
+  handleStart: () => void;
+  handlePause: () => void;
+  handleReset: () => void;
+}
+
+const ActionButtons: React.FC<CountDownBoxProps> = ({
   isRunning,
   handleStart,
   handlePause,
   handleReset,
-}: any) => {
+}) => {
   const { backgroundColor }: any = useContext(BackgroundColorContext);
 
   return (

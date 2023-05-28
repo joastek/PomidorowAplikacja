@@ -10,7 +10,6 @@ interface CountDownBoxProps {
   handlePause: () => void;
   handleReset: () => void;
 }
-
 const CountDownBox: React.FC<CountDownBoxProps> = ({
   timeLeft,
   isRunning,
@@ -40,6 +39,7 @@ const CountDownBox: React.FC<CountDownBoxProps> = ({
             handleStart={handleStart}
             handlePause={handlePause}
             handleReset={handleReset}
+            timeLeft={0}
           />
         </div>
       </div>
