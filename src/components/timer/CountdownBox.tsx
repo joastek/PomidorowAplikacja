@@ -39,7 +39,6 @@ const CountDownBox: React.FC<CountDownBoxProps> = ({
             handleStart={handleStart}
             handlePause={handlePause}
             handleReset={handleReset}
-            timeLeft={0}
           />
         </div>
       </div>

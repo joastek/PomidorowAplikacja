@@ -3,7 +3,6 @@ import { BackgroundColorContext } from "../models/Background";
 import Footer from "../footer/Footer";
 import "../../styles/pages/ActionButtons.scss";
 interface CountDownBoxProps {
-  timeLeft: number;
   isRunning: boolean;
   handleStart: () => void;
   handlePause: () => void;
