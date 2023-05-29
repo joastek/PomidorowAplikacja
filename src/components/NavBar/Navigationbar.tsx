@@ -16,7 +16,7 @@ const NavigationBar = ({
   return (
     <>
       <div className="navBar" style={{ backgroundColor }}>
-        <img src={logo} />
+        <img src={logo} className="logo" />
         <div className="navIcons">
           <NavLink
             to="/"

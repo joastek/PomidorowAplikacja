@@ -1,17 +1,10 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+@import "styles/abstracts/functions";
+@import "styles/abstracts/mixins";
+@import "styles/abstracts/variables";
 
-  /* font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%; */
-}
-html {
-  font-size: 62.5%;
-}
-body {
-  margin: 0;
-  display: flex;
-  box-sizing: border-box;
-}
+@import "styles/base/base";
+@import "styles/base/animations";
+@import "styles/base/typography";
+
+@import "styles/pages/NavBar";
+@import "styles/App";

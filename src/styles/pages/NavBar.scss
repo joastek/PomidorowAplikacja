@@ -1,9 +1,19 @@
+@import "../abstracts/mixins";
 .navBar {
   background-color: #f9ab55;
   display: flex;
+
   position: relative;
-  width: auto;
+
   justify-content: space-between;
+
+  @include respond(tab-land) {
+    flex-wrap: wrap;
+    background-color: yellow;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
   .navIcons {
     display: flex;
     padding: 2rem;
@@ -13,6 +23,13 @@
       width: 5rem;
       padding: 3rem;
       cursor: pointer;
+    }
+  }
+  .logo {
+    @include respond(tab-land) {
+      background-color: red;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

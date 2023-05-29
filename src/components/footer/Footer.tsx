@@ -2,7 +2,7 @@ import "../../styles/pages/Footer.scss";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <div className="container">
+    <div className="Footer_bar">
       {" "}
       <Link className="icon" to="https://www.facebook.com/jan.czyszczon.31">
         <i className="fa-brands fa-facebook"></i>
