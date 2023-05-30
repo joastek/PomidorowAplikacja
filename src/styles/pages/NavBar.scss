@@ -9,7 +9,7 @@
 
   @include respond(tab-land) {
     flex-wrap: wrap;
-    background-color: yellow;
+
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -27,9 +27,18 @@
   }
   .logo {
     @include respond(tab-land) {
-      background-color: red;
       align-items: center;
       justify-content: center;
+    }
+    @include respond(tab-port) {
+      align-items: center;
+      justify-content: center;
+      width: 100em;
+      height: 30em;
+    }
+    @include respond(phone) {
+      width: 50em;
+      height: 20em;
     }
   }
 }

@@ -1,9 +1,20 @@
+@import "../abstracts/mixins";
 .button_box_container {
   display: flex;
 
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  @include respond(tab-port) {
+    display: grid;
+    place-items: center;
+    margin-right: 2.5rem;
+    margin-bottom: 20em;
+  }
+  @include respond(tab-land) {
+    margin-bottom: 25em;
+  }
+
   .button_container {
     width: 40rem;
     height: 9rem;
@@ -11,6 +22,11 @@
     border: 5px solid #000000;
     margin-left: 5rem;
     cursor: pointer;
+
+    @include respond(tab-port) {
+      padding: 0;
+      margin-bottom: 2rem;
+    }
   }
   p {
     font-family: "Rowdies";

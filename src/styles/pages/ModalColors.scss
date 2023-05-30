@@ -1,49 +1,44 @@
+@import "../abstracts/mixins";
 .colorContainer {
   display: flex;
   place-items: center;
+  justify-content: space-between;
 
-  margin-left: 5rem;
-  margin-right: 5rem;
-  max-width: 100%;
+  padding: 3rem;
+
   .themeColor_1 {
     cursor: pointer;
 
-    margin: 3rem;
-    flex: auto;
     width: 3rem;
-    height: 4rem;
+    height: 3rem;
     background-color: rgb(12, 57, 205);
   }
   .themeColor_2 {
     cursor: pointer;
-    margin: 3rem;
-    flex: auto;
+
     width: 3rem;
-    height: 4rem;
+    height: 3rem;
     background-color: red;
   }
   .themeColor_3 {
     cursor: pointer;
-    margin: 3rem;
-    flex: auto;
+
     width: 3rem;
-    height: 4rem;
+    height: 3rem;
     background-color: rgb(11, 179, 98);
   }
   .themeColor_4 {
     cursor: pointer;
-    margin: 3rem;
-    flex: auto;
+
     width: 3rem;
-    height: 4rem;
+    height: 3rem;
     background-color: rgb(214, 9, 128);
   }
   .themeColor_5 {
     cursor: pointer;
-    margin: 3rem;
-    flex: auto;
+
     width: 3rem;
-    height: 4rem;
+    height: 3rem;
     background-color: rgb(223, 243, 5);
   }
   .active {

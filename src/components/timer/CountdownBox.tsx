@@ -33,7 +33,7 @@ const CountDownBox: React.FC<CountDownBoxProps> = ({
           <div className="box_2"></div>
           <div className="box_3"></div>
         </div>
-        <div>
+        <div className="ActionButtons">
           <ActionButtons
             isRunning={isRunning}
             handleStart={handleStart}

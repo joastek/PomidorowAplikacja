@@ -2,6 +2,8 @@
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 
   /* font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -19,7 +21,7 @@ html {
     font-size: 56.25%;
   }
   @include respond(phone) {
-    font-size: 30%;
+    font-size: 50%;
   }
   @include respond(big-desktop) {
     font-size: 75%;

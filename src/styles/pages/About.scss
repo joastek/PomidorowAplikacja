@@ -1,41 +1,60 @@
-.container {
+@import "../abstracts/mixins";
+.About_container {
   background-color: #f9ab55;
-  width: 100vw;
-  height: 64vh;
-  text-align: center;
-  justify-content: center;
+
   .boxes {
-    margin-left: 23rem;
-    padding: 15rem;
+    width: auto;
+    height: 53.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
-
-    .box_1 {
-      width: 47rem;
-      height: 26rem;
-      position: absolute;
-      border: 5px solid #000000;
-      background: #ef6348;
-      z-index: 3;
-    }
-    .box_2 {
-      width: 47rem;
-      height: 26rem;
-      border: 5px solid #000000;
-      background: #2669b8;
-      z-index: 2;
-      position: absolute;
-      transform: matrix(0.99, -0.17, 0.16, 0.99, 0, 0);
-    }
-    .box_3 {
-      position: absolute;
-      z-index: 1;
-      width: 47rem;
-      height: 26rem;
-      background: #f5bb12;
-      border: 5px solid #000000;
-      transform: matrix(1, -0.07, 0.07, 1, 0, 0);
+    .box {
+      .box_1 {
+        width: 47rem;
+        height: 26rem;
+        position: absolute;
+        border: 5px solid #000000;
+        background: #ef6348;
+        z-index: 3;
+        .text {
+          position: relative;
+          font-weight: 700;
+          font-size: 8rem;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          text-decoration: none;
+          font-family: "Rowdies", cursive;
+          color: black;
+          @include respond(phone) {
+            font-size: 17em;
+          }
+        }
+      }
+      .box_2 {
+        width: 47rem;
+        height: 26rem;
+        border: 5px solid #000000;
+        background: #2669b8;
+        z-index: 2;
+        position: absolute;
+        transform: matrix(0.99, -0.17, 0.16, 0.99, 0, 0);
+      }
+      .box_3 {
+        position: absolute;
+        z-index: 1;
+        width: 47rem;
+        height: 26rem;
+        background: #f5bb12;
+        border: 5px solid #000000;
+        transform: matrix(1, -0.07, 0.07, 1, 0, 0);
+      }
     }
   }
 }
