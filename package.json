@@ -20,6 +20,8 @@
     "sort-by": "^0.0.2"
   },
   "devDependencies": {
+    "@testing-library/dom": "^9.3.0",
+    "@testing-library/react": "^14.0.0",
     "@types/node": "^20.2.3",
     "@types/node-sass": "^4.11.3",
     "@types/react": "^18.0.28",

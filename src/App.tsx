@@ -9,7 +9,10 @@ import { Route, Routes } from "react-router-dom";
 import CountDownBox from "./components/timer/CountdownBox";
 import AboutApp from "./components/pages/About/AboutApp";
 import Instruction from "./components/pages/About/Instruction";
-
+import ResetSound from "./styles/sounds/ResetButton.wav";
+import SwitchSound from "./styles/sounds/SwitchButton.wav";
+import EndWorkoutSound from "./styles/sounds/EndWork.wav";
+import StartWorkoutSound from "./styles/sounds/StartWork.wav";
 const App = () => {
   const [workTime, setWorkTime] = useState(25);
   const [breakTime, setBreakTime] = useState(5);
@@ -23,27 +26,39 @@ const App = () => {
     if (isRunning && timeLeft > 0) {
       intervalId = setInterval(() => {
         setTimeLeft(timeLeft - 1);
-      }, 1000);
+      }, 50);
     } else if (timeLeft === 0) {
       setIsWorking(!isWorking);
       setTimeLeft(isWorking ? breakTime * 60 : workTime * 60);
     }
-
+    if (timeLeft === 0 && isWorking) {
+      const endWorkAudio = new Audio(EndWorkoutSound);
+      endWorkAudio.play();
+    } else if (timeLeft === 0 && !isWorking) {
+      const endBreakAudio = new Audio(StartWorkoutSound);
+      endBreakAudio.play();
+    }
     return () => clearInterval(intervalId);
   }, [isRunning, timeLeft, isWorking, breakTime, workTime]);
 
   const handleStart = () => {
     setIsRunning(true);
+    const SwitchAudio = new Audio(SwitchSound);
+    SwitchAudio.play();
   };
 
   const handlePause = () => {
     setIsRunning(false);
+    const SwitchAudio = new Audio(SwitchSound);
+    SwitchAudio.play();
   };
 
   const handleReset = () => {
     setIsRunning(false);
     setIsWorking(true);
     setTimeLeft(workTime * 60);
+    const ResetAudio = new Audio(ResetSound);
+    ResetAudio.play();
   };
 
   const handleWorkTimeChange = (event: any) => {
