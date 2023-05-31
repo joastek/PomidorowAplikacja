@@ -1,6 +1,13 @@
 @import "../abstracts/mixins";
 .About_container {
   background-color: #f9ab55;
+  padding: 4rem;
+
+  .about_arrow {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+  }
 
   .boxes {
     width: auto;
@@ -12,6 +19,13 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
+    @include respond(tab-port) {
+      height: 120em;
+      grid-template-columns: 1fr;
+    }
+    @include respond(phone) {
+      height: 145em;
+    }
     .box {
       .box_1 {
         width: 47rem;
@@ -20,6 +34,9 @@
         border: 5px solid #000000;
         background: #ef6348;
         z-index: 3;
+        @include respond(tab-land) {
+          width: 60em;
+        }
         .text {
           position: relative;
           font-weight: 700;
@@ -33,7 +50,7 @@
           font-family: "Rowdies", cursive;
           color: black;
           @include respond(phone) {
-            font-size: 17em;
+            font-size: 10em;
           }
         }
       }
@@ -45,6 +62,9 @@
         z-index: 2;
         position: absolute;
         transform: matrix(0.99, -0.17, 0.16, 0.99, 0, 0);
+        @include respond(tab-land) {
+          width: 60em;
+        }
       }
       .box_3 {
         position: absolute;
@@ -54,6 +74,9 @@
         background: #f5bb12;
         border: 5px solid #000000;
         transform: matrix(1, -0.07, 0.07, 1, 0, 0);
+        @include respond(tab-land) {
+          width: 60em;
+        }
       }
     }
   }

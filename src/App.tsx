@@ -1,12 +1,14 @@
 import "../src/styles/App.scss";
 import { useState, useEffect } from "react";
 
-import About from "./components/pages/About";
+import About from "./components/pages/About/About";
 import NavigationBar from "./components/NavBar/Navigationbar";
 import ErrorPage from "./components/pages/Error";
 import { Route, Routes } from "react-router-dom";
 
 import CountDownBox from "./components/timer/CountdownBox";
+import AboutApp from "./components/pages/About/AboutApp";
+import Instruction from "./components/pages/About/Instruction";
 
 const App = () => {
   const [workTime, setWorkTime] = useState(25);
@@ -82,7 +84,9 @@ const App = () => {
               />
             }
           />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/about/app" element={<AboutApp />} />
+          <Route path="/about/instruction" element={<Instruction />} />
           <Route path="/*" errorElement={<ErrorPage />}></Route>
         </Route>
       </Routes>

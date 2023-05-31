@@ -1,0 +1,40 @@
+@import "../abstracts/mixins";
+.Instruction_box {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f9ab55;
+  position: relative;
+  @include respond(tab-port) {
+    height: 120em;
+  }
+  .about_arrow {
+    position: absolute;
+    top: 2rem;
+    left: 10rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  .about_doublearrow {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  .Instruction {
+    border-radius: 5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 50rem;
+    height: 40rem;
+    @include respond(tab-port) {
+      margin-top: 15em;
+      width: 60em;
+      height: 45rem;
+    }
+    .Instruction_text {
+      padding: 2rem;
+      font-size: 2rem;
+    }
+  }
+}

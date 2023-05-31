@@ -1,15 +1,24 @@
 import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
-import { BackgroundColorContext } from "../models/Background";
-import "../../styles/pages/About.scss";
-import "../../styles/pages/CountodwonBox.scss";
-import Footer from "../footer/Footer";
+import { BackgroundColorContext } from "../../models/Background";
+import { motion } from "framer-motion";
+import "../../../styles/pages/About.scss";
+import "../../../styles/pages/CountodwonBox.scss";
+import Footer from "../../footer/Footer";
+import Arrow from "../../../styles/icons/ArrowLeftOutlined.png";
 const About = () => {
   const { backgroundColor }: any = useContext(BackgroundColorContext);
   return (
     <>
       <div className="About_container" style={{ backgroundColor }}>
-        go to sss<Link to="/">menu</Link>
+        <Link to="/" className="about_arrow">
+          {" "}
+          <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
+            {" "}
+            <img src={Arrow}></img>
+          </motion.div>
+        </Link>
+
         <div className="boxes">
           <div className="box">
             <div className="box_1">
