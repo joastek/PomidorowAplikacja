@@ -26,7 +26,7 @@ const App = () => {
     if (isRunning && timeLeft > 0) {
       intervalId = setInterval(() => {
         setTimeLeft(timeLeft - 1);
-      }, 50);
+      }, 1000);
     } else if (timeLeft === 0) {
       setIsWorking(!isWorking);
       setTimeLeft(isWorking ? breakTime * 60 : workTime * 60);

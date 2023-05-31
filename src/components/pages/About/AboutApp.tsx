@@ -2,7 +2,7 @@ import "../../../styles/pages/AboutApp.scss";
 import { useContext } from "react";
 import { BackgroundColorContext } from "../../models/Background";
 import { motion } from "framer-motion";
-import { Link, NavLink } from "react-router-dom";
+import { Link,  } from "react-router-dom";
 import Arrow from "../../../styles/icons/ArrowLeftOutlined.png";
 import DoubleArrow from "../../../styles/icons/DoubleLeftArrow.png";
 import Footer from "../../footer/Footer";

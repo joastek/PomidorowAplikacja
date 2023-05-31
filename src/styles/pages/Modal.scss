@@ -9,7 +9,7 @@ body {
   h1 {
     position: relative;
     text-align: center;
-    font-size: 8.8rem;
+    font-size: 5rem;
     font-weight: 700;
     line-height: 2rem;
 
@@ -20,7 +20,7 @@ body {
     }
   }
   input {
-    font-size: 5rem;
+    font-size: 3rem;
     display: flex;
     margin-left: 3rem;
     width: 8.7rem;
@@ -39,10 +39,11 @@ body {
   }
 
   /* Firefox */
-  input[type="number"] {
-    -moz-appearance: textfield;
-  }
+  // input[type="number"] {
+  //   -moz-appearance: textfield;
+  // }
   button {
+    cursor: pointer;
     color: white;
     background-color: black;
     width: 100%;
@@ -62,9 +63,9 @@ body {
   }
   .modal {
     position: fixed;
-    top: 10vh;
+    top: 3vh;
     bottom: 5vh;
-
+    height: 65rem;
     left: calc(50% - 30rem);
     width: 60rem;
     background-color: white;
@@ -98,7 +99,7 @@ body {
         width: 100%;
         line-height: 1.75;
         font-weight: 400;
-        font-size: 3.6rem;
+        font-size: 3rem;
         padding-left: 2rem;
         letter-spacing: 0.16em;
         text-transform: capitalize;
@@ -116,7 +117,7 @@ body {
         width: 100%;
         line-height: 1.75;
         font-weight: 400;
-        font-size: 2.4rem;
+        font-size: 2rem;
         padding-left: 2rem;
         letter-spacing: 0.16em;
       }
